@@ -5,18 +5,33 @@ using std::cout;
 
 void Lex::Start()
 {
-    // enquanto não atingir o fim da entrada
+    
     while ((lookahead = scanner.yylex()) != 0)
     {
-        // trata o token recebido do analisador léxico
+    
         switch(lookahead)
-        {
-            case IF: cout << "IF\n"; break;
-            case THEN: cout << "THEN\n"; break;
-            case ELSE: cout << "ELSE\n"; break;
-            case ID: cout << "ID: " << scanner.YYText() << "\n"; break;
+        {   case TDADOS: cout << "Tipo de dados:" << scanner.YYText() << "\n";break;
+            case CLASS: cout << "CLASS: " << scanner.YYText() << "\n"; break;
+            case EQUIVALENTTO: cout << "EQUIVALENTTO" <<  "\n";break;
+            case INDIVIDUALS: cout << "INDIVIDUALS:" << scanner.YYText() << "\n"; break;
+            case SUBCLASSOF: cout << "SUBCLASSOF"<< "\n";break;
+            case DISJOINTCLASSES: cout << "DISJOINTCLASSES" << "\n";break;
+            case SOME:cout << "SOME" << "\n";break;
+            case ALL:cout << "ALL" << "\n";break;
+            case VALUE:cout << "VALUE" << "\n";break;
+            case MIN:cout << "MIN" << "\n";break;
+            case MAX:cout << "MAX" << "\n";break;
+            case NOT:cout << "NOT" << "\n";break;
+            case AND:cout << "AND" << "\n";break;
+            case OR:cout << "OR" << "\n";break;
+            case EXACTLY:cout << "EXACTLY" << "\n";break;
+            case THAT:cout << "THAT" << "\n";break;
+            case RESERVADO:cout << "RESERVADO" << "\n";break;
+            case HAS: cout << "HAS:" << scanner.YYText() << "\n"; break;
+            case IS: cout << "IS:" << scanner.YYText() << "\n"; break;
             case NUM: cout << "NUM: " << scanner.YYText() << "\n"; break;
-            case RELOP: cout << "RELOP: " << scanner.YYText() << "\n";; break;
+            case RELOP: cout << "RELOP: " << scanner.YYText() << "\n"; break;
+            case PROPRIEDADES: cout << "PROPRIEDADES:"<< scanner.YYText()<<"\n";break;
         }
     }
 }
