@@ -5,7 +5,6 @@ using std::cout;
 
 void Lex::Start()
 {
-    // Declare contadores para cada tipo de token
     int contadorTDADOS = 0;
     int contadorCLASS = 0;
     int contadorEQUIVALENTTO = 0;
@@ -35,7 +34,6 @@ void Lex::Start()
         {
             case TDADOS:
                 cout << "Tipo de dados:" << scanner.YYText() << "\n";
-                // Incrementar o contador correspondente
                 contadorTDADOS++;
                 cout << "Contador TDADOS: " << contadorTDADOS << "\n";
                 break;
