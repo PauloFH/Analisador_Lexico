@@ -5,33 +5,165 @@ using std::cout;
 
 void Lex::Start()
 {
-    
+    // Declare contadores para cada tipo de token
+    int contadorTDADOS = 0;
+    int contadorCLASS = 0;
+    int contadorEQUIVALENTTO = 0;
+    int contadorINDIVIDUALS = 0;
+    int contadorSUBCLASSOF = 0;
+    int contadorDISJOINTCLASSES = 0;
+    int contadorSOME = 0;
+    int contadorALL = 0;
+    int contadorVALUE = 0;
+    int contadorMIN = 0;
+    int contadorMAX = 0;
+    int contadorNOT = 0;
+    int contadorAND = 0;
+    int contadorOR = 0;
+    int contadorEXACTLY = 0;
+    int contadorTHAT = 0;
+    int contadorRESERVADO = 0;
+    int contadorHAS = 0;
+    int contadorIS = 0;
+    int contadorNUM = 0;
+    int contadorRELOP = 0;
+    int contadorPROPRIEDADES = 0;
+
     while ((lookahead = scanner.yylex()) != 0)
     {
-    
-        switch(lookahead)
-        {   case TDADOS: cout << "Tipo de dados:" << scanner.YYText() << "\n";break;
-            case CLASS: cout << "CLASS: " << scanner.YYText() << "\n"; break;
-            case EQUIVALENTTO: cout << "EQUIVALENTTO" <<  "\n";break;
-            case INDIVIDUALS: cout << "INDIVIDUALS:" << scanner.YYText() << "\n"; break;
-            case SUBCLASSOF: cout << "SUBCLASSOF"<< "\n";break;
-            case DISJOINTCLASSES: cout << "DISJOINTCLASSES" << "\n";break;
-            case SOME:cout << "SOME" << "\n";break;
-            case ALL:cout << "ALL" << "\n";break;
-            case VALUE:cout << "VALUE" << "\n";break;
-            case MIN:cout << "MIN" << "\n";break;
-            case MAX:cout << "MAX" << "\n";break;
-            case NOT:cout << "NOT" << "\n";break;
-            case AND:cout << "AND" << "\n";break;
-            case OR:cout << "OR" << "\n";break;
-            case EXACTLY:cout << "EXACTLY" << "\n";break;
-            case THAT:cout << "THAT" << "\n";break;
-            case RESERVADO:cout << "RESERVADO" << "\n";break;
-            case HAS: cout << "HAS:" << scanner.YYText() << "\n"; break;
-            case IS: cout << "IS:" << scanner.YYText() << "\n"; break;
-            case NUM: cout << "NUM: " << scanner.YYText() << "\n"; break;
-            case RELOP: cout << "RELOP: " << scanner.YYText() << "\n"; break;
-            case PROPRIEDADES: cout << "PROPRIEDADES:"<< scanner.YYText()<<"\n";break;
+        switch (lookahead)
+        {
+            case TDADOS:
+                cout << "Tipo de dados:" << scanner.YYText() << "\n";
+                // Incrementar o contador correspondente
+                contadorTDADOS++;
+                cout << "Contador TDADOS: " << contadorTDADOS << "\n";
+                break;
+
+            case CLASS:
+                cout << "CLASS: " << scanner.YYText() << "\n";
+                contadorCLASS++;
+                cout << "Contador CLASS: " << contadorCLASS << "\n";
+                break;
+
+            case EQUIVALENTTO:
+                cout << "EQUIVALENTTO" << "\n";
+                contadorEQUIVALENTTO++;
+                cout << "Contador EQUIVALENTTO: " << contadorEQUIVALENTTO << "\n";
+                break;
+
+            case INDIVIDUALS:
+                cout << "INDIVIDUALS:" << scanner.YYText() << "\n";
+                contadorINDIVIDUALS++;
+                cout << "Contador INDIVIDUALS: " << contadorINDIVIDUALS << "\n";
+                break;
+
+            case SUBCLASSOF:
+                cout << "SUBCLASSOF" << "\n";
+                contadorSUBCLASSOF++;
+                cout << "Contador SUBCLASSOF: " << contadorSUBCLASSOF << "\n";
+                break;
+
+            case DISJOINTCLASSES:
+                cout << "DISJOINTCLASSES" << "\n";
+                contadorDISJOINTCLASSES++;
+                cout << "Contador DISJOINTCLASSES: " << contadorDISJOINTCLASSES << "\n";
+                break;
+
+            case SOME:
+                cout << "SOME" << "\n";
+                contadorSOME++;
+                cout << "Contador SOME: " << contadorSOME << "\n";
+                break;
+
+            case ALL:
+                cout << "ALL" << "\n";
+                contadorALL++;
+                cout << "Contador ALL: " << contadorALL << "\n";
+                break;
+
+            case VALUE:
+                cout << "VALUE" << "\n";
+                contadorVALUE++;
+                cout << "Contador VALUE: " << contadorVALUE << "\n";
+                break;
+
+            case MIN:
+                cout << "MIN" << "\n";
+                contadorMIN++;
+                cout << "Contador MIN: " << contadorMIN << "\n";
+                break;
+
+            case MAX:
+                cout << "MAX" << "\n";
+                contadorMAX++;
+                cout << "Contador MAX: " << contadorMAX << "\n";
+                break;
+
+            case NOT:
+                cout << "NOT" << "\n";
+                contadorNOT++;
+                cout << "Contador NOT: " << contadorNOT << "\n";
+                break;
+
+            case AND:
+                cout << "AND" << "\n";
+                contadorAND++;
+                cout << "Contador AND: " << contadorAND << "\n";
+                break;
+
+            case OR:
+                cout << "OR" << "\n";
+                contadorOR++;
+                cout << "Contador OR: " << contadorOR << "\n";
+                break;
+
+            case EXACTLY:
+                cout << "EXACTLY" << "\n";
+                contadorEXACTLY++;
+                cout << "Contador EXACTLY: " << contadorEXACTLY << "\n";
+                break;
+
+            case THAT:
+                cout << "THAT" << "\n";
+                contadorTHAT++;
+                cout << "Contador THAT: " << contadorTHAT << "\n";
+                break;
+
+            case RESERVADO:
+                cout << "RESERVADO" << "\n";
+                contadorRESERVADO++;
+                cout << "Contador RESERVADO: " << contadorRESERVADO << "\n";
+                break;
+
+            case HAS:
+                cout << "HAS:" << scanner.YYText() << "\n";
+                contadorHAS++;
+                cout << "Contador HAS: " << contadorHAS << "\n";
+                break;
+
+            case IS:
+                cout << "IS:" << scanner.YYText() << "\n";
+                contadorIS++;
+                cout << "Contador IS: " << contadorIS << "\n";
+                break;
+
+            case NUM:
+                cout << "NUM: " << scanner.YYText() << "\n";
+                contadorNUM++;
+                cout << "Contador NUM: " << contadorNUM << "\n";
+                break;
+
+            case RELOP:
+                cout << "RELOP: " << scanner.YYText() << "\n";
+                contadorRELOP++;
+                cout << "Contador RELOP: " << contadorRELOP << "\n";
+                break;
+
+            case PROPRIEDADES:
+                cout << "PROPRIEDADES:" << scanner.YYText() << "\n";
+                contadorPROPRIEDADES++;
+                cout << "Contador PROPRIEDADES: " << contadorPROPRIEDADES << "\n";
+                break;
         }
     }
-}
