@@ -70,9 +70,9 @@ void Lex::Start()
                 break;
 
             case ONLY:
-                cout << "SOME" << "\n";
+                cout << "ONLY" << "\n";
                 contadorONLY++;
-                cout << "Contador SOME: " << contadorONLY << "\n";
+                cout << "Contador ONLY: " << contadorONLY << "\n";
                 break;
 
             case SOME:
