@@ -23,6 +23,7 @@ tdados      {letra}+:{letra}+
 EquivalentTo    return EQUIVALENTTO;
 SubClassOf      return SUBCLASSOF;
 DisjointClasses return DISJOINTCLASSES;
+only            return ONLY;
 some            return SOME;
 all             return ALL;
 value           return VALUE;

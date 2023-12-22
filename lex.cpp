@@ -11,6 +11,7 @@ void Lex::Start()
     int contadorINDIVIDUALS = 0;
     int contadorSUBCLASSOF = 0;
     int contadorDISJOINTCLASSES = 0;
+    int contadorONLY = 0;
     int contadorSOME = 0;
     int contadorALL = 0;
     int contadorVALUE = 0;
@@ -66,6 +67,12 @@ void Lex::Start()
                 cout << "DISJOINTCLASSES" << "\n";
                 contadorDISJOINTCLASSES++;
                 cout << "Contador DISJOINTCLASSES: " << contadorDISJOINTCLASSES << "\n";
+                break;
+
+            case ONLY:
+                cout << "SOME" << "\n";
+                contadorONLY++;
+                cout << "Contador SOME: " << contadorONLY << "\n";
                 break;
 
             case SOME:
@@ -165,3 +172,31 @@ void Lex::Start()
                 break;
         }
     }
+   cout << "+------------------------+----------------------+\n";
+    cout << "| Tipo de Contador       | Contagem             |\n";
+    cout << "+------------------------+----------------------+\n";
+    cout << "| Contador TDADOS        | " << contadorTDADOS << "                    |\n";
+    cout << "| Contador CLASS         | " << contadorCLASS << "                   |\n";
+    cout << "| Contador EQUIVALENTTO  | " << contadorEQUIVALENTTO << "               |\n";
+    cout << "| Contador INDIVIDUALS    | " << contadorINDIVIDUALS << "               |\n";
+    cout << "| Contador SUBCLASSOF    | " << contadorSUBCLASSOF << "               |\n";
+    cout << "| Contador DISJOINTCLASSES| " << contadorDISJOINTCLASSES << "           |\n"; 
+    cout << "| Contador ONLY          | " << contadorONLY << "                    |\n";
+    cout << "| Contador SOME          | " << contadorSOME << "                    |\n";
+    cout << "| Contador ALL           | " << contadorALL << "                     |\n";
+    cout << "| Contador VALUE         | " << contadorVALUE << "                   |\n";
+    cout << "| Contador MIN           | " << contadorMIN << "                     |\n";
+    cout << "| Contador MAX           | " << contadorMAX << "                     |\n";
+    cout << "| Contador NOT           | " << contadorNOT << "                     |\n";
+    cout << "| Contador AND           | " << contadorAND << "                     |\n";
+    cout << "| Contador OR            | " << contadorOR << "                      |\n";
+    cout << "| Contador EXACTLY       | " << contadorEXACTLY << "                 |\n";
+    cout << "| Contador THAT          | " << contadorTHAT << "                    |\n";
+    cout << "| Contador RESERVADO     | " << contadorRESERVADO << "                |\n";
+    cout << "| Contador HAS           | " << contadorHAS << "                     |\n";
+    cout << "| Contador IS            | " << contadorIS << "                      |\n";
+    cout << "| Contador NUM           | " << contadorNUM << "                     |\n";
+    cout << "| Contador RELOP         | " << contadorRELOP << "                   |\n";
+    cout << "| Contador PROPRIEDADES  | " << contadorPROPRIEDADES << "            |\n";
+    cout << "+------------------------+----------------------+\n";
+}
